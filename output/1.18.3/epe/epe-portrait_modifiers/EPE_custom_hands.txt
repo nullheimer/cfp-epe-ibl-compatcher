@@ -1,0 +1,24 @@
+﻿custom_special_accessories_hands = {
+	usage = customization
+	interface_position = 12
+
+	add_accessory_modifiers = {
+		gene = special_accessories_hands
+		template = no_hand_accessories
+	}
+
+	add_accessory_modifiers = {
+		gene = special_accessories_hands
+		template = baldwin_gloves
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+}

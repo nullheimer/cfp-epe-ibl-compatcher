@@ -1,0 +1,83 @@
+﻿custom_earrings = {
+	usage = customization
+	interface_position = 6
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = no_earrings
+	}
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = ep2_western_high_nobility
+		is_valid_custom = {
+			has_ep2_dlc_trigger = yes
+		}
+	}
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = byzantine_high_nobility
+
+	}
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = mena_high_nobility
+
+	}
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = andalucia_nobility
+		is_valid_custom = {
+			has_fp2_dlc_trigger = yes
+		}
+	}
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = fp3_iranian_nobility
+		is_valid_custom = {
+			has_fp3_dlc_trigger = yes
+		}
+	}		
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = african_low_nobility
+
+	}
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = indian_high_nobility
+
+	}
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = steppe_high_nobility
+
+	}
+	
+	### MPO - Khans of the Steppe ###
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = mpo_mongol_high_nobility
+		is_valid_custom = {
+			has_mpo_dlc_trigger = yes
+		}
+	}	
+
+	add_accessory_modifiers = {
+		gene = special_accessories_earrings
+		template = slavic_low_nobility
+
+	}
+
+
+
+
+
+
+
+}

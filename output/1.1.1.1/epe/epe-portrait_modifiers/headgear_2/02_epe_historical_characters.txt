@@ -1,0 +1,5165 @@
+﻿epe_historical_characters_accessories = {
+
+    usage = game
+    selection_behavior = max
+    priority = 2
+
+#---------------------------------------------------- 1066 Historical Figures ------------------------------------------------------------#
+
+    # Heinrich III Salian - Dead in 1066 #
+    1314_heinrich_III_salian_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = sp2_western_imperial
+                value = 1.0
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+                exists = character:1314 #Heinrich III, HRE Emperor
+                this = character:1314 #Heinrich III, HRE Emperor
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    1314_emperor_heinrich = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1314
+                this = character:1314
+            }
+        }
+    }
+
+    7755_beatrix_of_tuscany_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_04
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:7755
+				this = character:7755
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    7755_beatrix_of_tuscany = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_western_04
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:7755
+                this = character:7755
+            }
+        }
+    }
+
+    7756_boniface_canossa_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_02
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+                exists = character:7756 
+                this = character:7756 
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    7756_boniface_canossa = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:7756
+                this = character:7756
+            }
+        }
+    }
+
+    237_agnes_poiters_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_10
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:237
+				this = character:237
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    237_agnes_poiters = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_western_10
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:237
+                this = character:237
+            }
+        }
+    }
+
+    1476_jutta_salian_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_09
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:1476
+				this = character:1476
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    1476_jutta_salian = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_western_09
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1476
+                this = character:1476
+            }    
+        }
+    }
+
+    11002_friedrich_II_wigeriche_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_08
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = beards
+            #     template = scripted_character_beards_03
+            #     accessory = m_beard_ep2_western_02
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+                exists = character:11002
+                this = character:11002
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    11002_friedrich_II_wigeriche = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_08
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = beards
+            #     template = scripted_character_beards_03
+            #     accessory = m_beard_ep2_western_02
+            # }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:11002
+                this = character:11002
+            }
+        }
+    }
+    
+    1736_michael_VII_doukas_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1736 #Michael VII Doukas
+                this = character:1736 #Michael VII Doukas
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1736_michael_VII_doukas = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1736 #Michael VII Doukas
+                this = character:1736 #Michael VII Doukas
+            }
+        }
+    }
+
+    1732_konstantinos_X_doukas_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = all_headgear
+                accessory = m_headgear_sec_ep3_byzantine_era2_imp_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1732 
+                this = character:1732 
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1732_konstantinos_X_doukas = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = all_headgear
+                accessory = m_headgear_sec_ep3_byzantine_era2_imp_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1732 
+                this = character:1732 
+            }
+        }
+    }
+
+    1742_alexios_komnenos_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1742
+                this = character:1742
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1742_alexios_komnenos = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_04
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1742
+                this = character:1742
+            }
+        }
+    }
+
+    472_geza_I_arpad_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:472
+                this = character:472 
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    472_geza_I_arpad = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:472
+                this = character:472
+            }    
+        }
+    }
+
+    474_laszlo_I_arpad_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_02
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:474
+                this = character:474
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    474_laszlo_I_arpad = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_02
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:474
+                this = character:474
+            }    
+        }
+    }
+
+    476_salamon_I_arpad_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_03
+                accessory = male_hair_fp2_iberian_christian_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:476
+                this = character:476
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    476_salamon_I_arpad = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_03
+                accessory = male_hair_fp2_iberian_christian_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:476
+                this = character:476
+            }    
+        }
+    }
+    3040_alp_arslan = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_turkic_straight
+                accessory = m_hair_fp3_iranian_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:3040
+                this = character:3040
+            }
+        }
+    }
+	
+    3040_alp_arslan_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = seljuk_turkic_headgear
+                accessory = male_seljuk_royal_crown_01	
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = seljuk_turkic_clothes
+                accessory = male_clothes_secular_seljuk_nobility_04_high	
+            }			
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_turkic_straight
+                accessory = m_hair_fp3_iranian_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:3040
+                this = character:3040
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+	
+    3045_alp_arslan_spouse_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = seljuk_turkic_headgear
+                accessory = female_headgear_epe_seljuk_royal_nobility_02
+                type = female				
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = seljuk_turkic_clothes
+                accessory = male_clothes_secular_seljuk_nobility_04_high	
+            }			
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_turkic_straight
+                accessory = m_hair_fp3_iranian_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:3045
+                this = character:3045
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }	
+#---------------------------------------------------- 867 Historical Figures - Europe ------------------------------------------------------------#
+    1700_basileios_makedon_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_03
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = all_headgear
+                accessory = m_headgear_sec_ep3_byzantine_era1_imp_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1700
+                this = character:1700
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1700_basileios_makedon = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1700
+                this = character:1700
+            }    
+        }
+    }
+
+    1702_leo_makedon_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_07
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                age > 4
+                exists = this
+                exists = character:1702
+                this = character:1702
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1702_leo_makedon = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_07
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                age > 4
+                exists = this
+                exists = character:1702
+                this = character:1702
+            }    
+        }
+    }
+
+    1706_romanos_lekapenos_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_06
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_01
+			}
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1706
+                this = character:1706
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1706_romanos_lekapenos = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_06
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_01
+			}
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1706
+                this = character:1706
+            }    
+        }
+    }
+
+    145931_niketas_ooryphas_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                value = 0
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:145931
+                this = character:145931
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    145931_niketas_ooryphas = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:145931
+                this = character:145931
+            }    
+        }
+    }
+
+    70490_michael_III_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04 
+			}
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:70490
+                this = character:70490
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    70490_michael_III = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_04 
+			}
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:70490
+                this = character:70490
+            }    
+        }
+    }
+    
+    70382_boris_krum_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_steppe_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:70382
+                this = character:70382
+                portrait_royalty_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    168075_maria_krum_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep3_byzantine_hairstyle
+                accessory = f_hair_ep3_byzantine_03
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:168075
+                this = character:168075
+                portrait_royalty_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    712_simeon_the_great_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_08
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_09
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:712
+                this = character:712
+            }
+        }
+    }
+
+    712_simeon_the_great = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_08
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_09
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:712
+                this = character:712
+            }
+        }
+    }
+
+    1761_eudokia_inger_start = { 
+        dna_modifiers = {
+            # morph = {
+            #     mode = add
+            #     gene = cosmetics_eyeliner
+            #     template = byzantine_1
+            #     value = 0.0
+            # }
+            # morph = {
+            #     mode = add
+            #     gene = cosmetics_blush
+            #     template = byzantine_1
+            #     value = 0.0
+            # }
+            # morph = {
+            #     mode = add
+            #     gene = cosmetics_lipcolor
+            #     template = byzantine_1
+            #     value = 0.75
+            # }
+            # morph = {
+            #     mode = add
+            #     gene = cosmetics_foundation
+            #     template = byzantine_1
+            #     value = 0.0
+            # }
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_fp1_02
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:1761
+                this = character:1761
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    1761_eudokia_inger = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_fp1_02
+                type = female
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:1761
+                this = character:1761
+            }    
+        }
+    }
+
+    70382_boris_krum = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_steppe_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:70382
+                this = character:70382
+            }    
+        }
+    }
+
+    6877_queen_teutberga_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_02
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era1_royalty
+                accessory = f_headgear_sec_ep2_western_era1_roy_01
+                type = female
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = ep2_western_era1_high_nobility_clothes
+            #     accessory = m_clothes_sec_ep2_western_era1_nob_01_hi
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:6877
+				this = character:6877
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    6877_queen_teutberga = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_02
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:6877
+                this = character:6877
+            }
+        }
+    }
+
+    167830_queen_irmintrud_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_02
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era1_royalty
+                accessory = f_headgear_sec_ep2_western_era1_roy_01
+                type = female
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = ep2_western_era1_high_nobility_clothes
+                accessory = m_clothes_sec_ep2_western_era1_nob_01_hi
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+				exists = this
+				exists = character:167830
+				this = character:167830
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    167830_queen_irmintrud = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_02
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:167830
+                this = character:167830
+            }
+        }
+    }
+
+    167894_queen_engelberga_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era1_royalty
+                accessory = m_headgear_sec_ep2_western_era1_roy_01
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:167894
+				this = character:167894
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    167894_queen_engelberga = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_01
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:167894
+                this = character:167894
+            }
+        }
+    }
+
+    7987_queen_hemma_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_byzantine_01
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = ep2_western_era1_royalty
+            #     accessory = m_epe_era1_carol_royalty_02
+            # }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:7987
+				this = character:7987
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    7987_queen_hemma = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_byzantine_01
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:7987
+                this = character:7987
+            }
+        }
+    }
+
+    167847_queen_richardis_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_02
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:167847
+				this = character:167847
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    167847_queen_richardis = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_02
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:167847
+                this = character:167847
+            }
+        }
+    }
+
+    7982_ermengarde_of_italy_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_02
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:7982
+				this = character:7982
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    7982_ermengarde_of_italy = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_02
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:7982
+                this = character:7982
+            }
+        }
+    }
+
+    163172_gisele_of_italy_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:163172
+				this = character:163172
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    163172_gisele_of_italy = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_01
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:163172
+                this = character:163172
+            }
+        }
+    }
+
+    167813_queen_liutswind_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+			# accessory = {
+            #     mode = add
+            #     gene = clothes
+            #     template = western_high_nobility_clothes
+            #     accessory = male_clothes_secular_western_nobility_03_high
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:167813
+				this = character:167813
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = dde_hre
+                }
+            }
+        }
+    }
+
+    167813_queen_liutswind = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = f_hair_ep2_western_02
+                type = female
+            }
+            # accessory = {
+            #     mode = add
+            #     gene = headgear
+            #     template = sp2_western_high_nobility
+            #     accessory = m_headgear_sec_sp2_western_hi_nob_01
+            # }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:167813
+                this = character:167813
+            }
+        }
+    }
+
+    163104_artgal_alt_clut_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:163104
+                this = character:163104
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    163104_artgal_alt_clut = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:163104
+                this = character:163104
+            }
+        }
+    }
+
+    166442_rhun_alt_clut_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_05
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:166442
+                this = character:166442
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    166442_rhun_alt_clut = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_05
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:166442
+                this = character:166442
+            }
+        }
+    }
+
+    166441_oucydd_alt_clut_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_07
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = sp2_beards_straight
+                accessory = m_beard_sp2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:166441
+                this = character:166441
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    166441_oucydd_alt_clut = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_07
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = sp2_beards_straight
+                accessory = m_beard_sp2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:166441
+                this = character:166441
+            }
+        }
+    }
+
+    166440_dyfnwal_alt_clut_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:166440
+                this = character:166440
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    166440_dyfnwal_alt_clut = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:166440
+                this = character:166440
+            }
+        }
+    }
+
+    163103_aelle_of_northumbria_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:163103
+                this = character:163103
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    163103_aelle_of_northumbria = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:163103
+                this = character:163103
+            }
+        }
+    }
+
+    163071_adelchis_benevento_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_07
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:163071
+                this = character:163071
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    163071_adelchis_benevento = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_07
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:163071
+                this = character:163071
+            }
+        }
+    }
+
+    90109_baldwin_of_flanders_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:90109
+                this = character:90109
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    90109_baldwin_of_flanders = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:90109
+                this = character:90109
+            }
+        }
+    }
+
+    7981_boso_of_provence_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:7981
+                this = character:7981
+                portrait_commoner_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    7981_boso_of_provence = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_04
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:7981
+                this = character:7981
+            }
+        }
+    }
+
+#---------------------------------------------------- 867 Historical Figures - MENA ------------------------------------------------------------#
+    45107_vandad_karen_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_07
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:45107
+                this = character:45107
+                portrait_low_nobles_trigger = {
+                    CULTURE_INPUT = mena
+                }
+            }
+        }
+    }
+
+    45107_vandad_karen = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_07
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:45107
+                this = character:45107
+            }    
+        }
+    }
+
+    45109_farah_karen_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:45109
+				this = character:45109
+                portrait_low_nobles_trigger = { 
+                    CULTURE_INPUT = mena
+                }
+            }
+        }
+    }
+
+    45109_farah_karen = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_mena_01
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:45109
+                this = character:45109
+            }
+        }
+    }
+
+    160295_shervin_bavandid = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_05
+                accessory = m_hair_fp3_iranian_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp3_iranian_beards_straight
+                accessory = m_beard_fp3_iranian_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:160295
+                this = character:160295
+            }
+        }
+    }
+
+    # 163101_yaqub_saffarid_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_01
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = all_beards
+    #             accessory = m_beard_sp2_western_01
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = headgear
+    #             template = early_islamic_iranian_high_nobility
+    #             accessory = male_headgear_secular_iranian_qalansuwwa_02_high
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:163101
+    #             this = character:163101
+    #             portrait_royalty_trigger = {
+    #                 CULTURE_INPUT = epe_islamic_iranian
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 163101_yaqub_saffarid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_01
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = all_beards
+    #             accessory = m_beard_sp2_western_01
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:163101
+    #             this = character:163101
+    #         }    
+    #     }
+    # }
+    
+    # 163100_muhammad_tahirid_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_01
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:163100
+    #             this = character:163100
+    #             portrait_royalty_trigger = {
+    #                 CULTURE_INPUT = mena
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 163100_muhammad_tahirid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_01
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:163100
+    #             this = character:163100
+    #         }    
+    #     }
+    # }
+
+    # 45108_hassan_hashimid_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_02
+    #             accessory = male_beard_fp2_iberian_christian_03
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:45108
+    #             this = character:45108
+    #             portrait_high_nobles_trigger = {
+    #                 CULTURE_INPUT = mena
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 45108_hassan_hashimid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_02
+    #             accessory = male_beard_fp2_iberian_christian_03
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:45108
+    #             this = character:45108
+    #         }    
+    #     }
+    # }
+
+    163098_aziz_dulafid_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:163098
+                this = character:163098
+                portrait_high_nobles_trigger = {
+                    CULTURE_INPUT = mena
+                }
+            }
+        }
+    }
+
+    163098_aziz_dulafid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_mena_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:163098
+                this = character:163098
+            }    
+        }
+    }
+
+    188598_eraq_afrighid_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp3_iranian_beards_straight
+                accessory = m_beard_fp3_iranian_01
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = fp3_iranian_high_nobility
+                accessory = m_headgear_sec_fp3_iranian_nob_02
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = fp3_iranian_high_nobility_clothes
+                accessory = m_clothes_sec_fp3_iranian_nob_03_hi
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:188598
+                this = character:188598
+                portrait_high_nobles_trigger = {
+                    CULTURE_INPUT = fp3_iranian
+                }
+            }
+        }
+    }
+
+    188598_eraq_afrighid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_mena_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp3_iranian_beards_straight
+                accessory = m_beard_fp3_iranian_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:188598
+                this = character:188598
+            }    
+        }
+    }
+
+    # 163099_nasr_samanid_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_02
+    #             accessory = male_beard_fp2_iberian_christian_04
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = headgear
+    #             template = early_islamic_iranian_high_nobility
+    #             accessory = male_headgear_secular_iranian_qalansuwwa_05_high
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:163099
+    #             this = character:163099
+    #             portrait_royalty_trigger = {
+    #                 CULTURE_INPUT = epe_islamic_iranian
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 163099_nasr_samanid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_02
+    #             accessory = male_beard_fp2_iberian_christian_04
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:163099
+    #             this = character:163099
+    #         }    
+    #     }
+    # }
+
+    # 163157_ismail_samanid_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_02
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_04
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:163157
+    #             this = character:163157
+    #             portrait_high_nobles_trigger = {
+    #                 CULTURE_INPUT = mena
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 163157_ismail_samanid = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_02
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_04
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:163157
+    #             this = character:163157
+    #         }    
+    #     }
+    # }
+
+    # 34014_al_mutazz_start = { 
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_04
+    #         }
+    #     }   
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 200
+    #             exists = this
+    #             exists = character:34014
+    #             this = character:34014
+    #             portrait_imperial_trigger = {
+    #                 CULTURE_INPUT = dde_abbasid
+    #             }
+    #         }
+    #     }
+    # }
+
+    # 34014_al_mutazz = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+    #     dna_modifiers = {
+    #         accessory = {
+    #             mode = add
+    #             gene = hairstyles
+    #             template = scripted_character_hairstyles_01
+    #             accessory = male_hair_mena_03
+    #         }
+    #         accessory = {
+    #             mode = add
+    #             gene = beards
+    #             template = scripted_character_beards_01
+    #             accessory = male_beard_mena_04
+    #         }
+    #     }
+    #     weight = {
+    #         base = 0
+    #         modifier = {
+    #             add = 100
+    #             exists = this
+    #             exists = character:34014
+    #             this = character:34014
+    #         }    
+    #     }
+    # }
+#---------------------------------------------------- 867 Historical Figures - Magyars ------------------------------------------------------------#
+    159137_almos_arpad_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_steppe_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_steppe_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:159137
+                this = character:159137
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+
+    159137_almos_arpad = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_steppe_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_christian_04
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:159137
+                this = character:159137
+            }    
+        }
+    }
+
+    159136_arpad_arpad_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_steppe_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:159136
+                this = character:159136
+                portrait_low_nobles_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+
+    159136_arpad_arpad = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_steppe_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_02
+                accessory = male_beard_fp2_iberian_muslim_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:159136
+                this = character:159136
+            }    
+        }
+    }
+#---------------------------------------------------- 867 Historical Figures - Karlings ------------------------------------------------------------#
+    # Louis the Pious #
+    90095_louis_the_pious_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_03
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = ep2_western_era1_imperial
+                accessory = m_headgear_sec_ep2_western_era1_imp_01
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = ep2_western_era1_high_nobility_clothes
+                accessory = m_clothes_sec_ep2_western_era1_nob_01_hi
+            }
+			accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:90095
+				this = character:90095
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }   
+            }
+        }
+    }
+
+    90095_louis_the_pious = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:90095
+                this = character:90095
+            }
+        }
+    }
+    
+    # Charlemagne #
+    6392_charlemagne_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_03
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = dde_hre_imperial
+                accessory = male_headgear_secular_western_imperial_01
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = ep2_western_era1_high_nobility_clothes
+                accessory = m_clothes_sec_ep2_western_era1_nob_01_hi
+            }
+			accessory = {
+                mode = add
+                gene = cloaks
+                template = ep2_cloak_western_era1_high_nobility
+                accessory = m_cloaks_sec_ep2_western_era1_nob_01_hi
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:6392
+				this = character:6392
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }   
+            }
+        }
+    }
+
+    6392_charlemagne = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep2_hairstyles_western
+                accessory = m_hair_ep2_western_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_03
+                accessory = m_beard_ep2_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:6392
+                this = character:6392
+            }
+        }
+    }
+
+    163094_sawdan_sawdanid_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp2_hairstyles_maghrebi_wavy_common
+                accessory = male_hair_fp2_iberian_muslim_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp2_beards_straight
+                accessory = male_beard_fp2_iberian_christian_04
+            }			
+             accessory = {
+                 mode = add
+                 gene = headgear
+                 template = afr_high_nobility
+                 accessory = male_headgear_epe_white_mena_nobility_03
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = afr_high_nobility_clothes
+                accessory = male_clothes_fp2_epe_baranis_nobility_05_high
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+				exists = this
+                age > 4
+				exists = character:163094
+				this = character:163094
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = afr_berber
+                }
+                NOR = {
+                  portrait_royalty_trigger = {
+                    CULTURE_INPUT = afr_berber
+                  }  
+                  portrait_imperial_trigger = {
+                    CULTURE_INPUT = afr_berber
+                  }  
+                }	
+				
+            }
+        }
+    }
+	
+    163094_sawdan_sawdanid_royalty = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp2_hairstyles_maghrebi_wavy_common
+                accessory = male_hair_fp2_iberian_muslim_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp2_beards_straight
+                accessory = male_beard_fp2_iberian_christian_04
+            }			
+             accessory = {
+                 mode = add
+                 gene = headgear
+                 template = afr_royalty
+                 accessory = male_headgear_epe_fp2_maghreb_royalty_01
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = afr_high_nobility_clothes
+                accessory = male_clothes_fp2_epe_baranis_nobility_05_high
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+				exists = this
+                age > 4
+				exists = character:163094
+				this = character:163094
+                portrait_royalty_trigger = { 
+                    CULTURE_INPUT = afr_berber
+                }
+					
+            }
+        }
+    }	
+     epe_sawdan_sawdanid_spouse = { 
+         dna_modifiers = {
+             accessory = {
+                 mode = add
+                 gene = hairstyles
+                 template = fp2_hairstyles_iberian_christian_straight
+                 accessory = male_hair_fp2_iberian_christian_03
+             }			
+             accessory = {
+                 mode = add
+                 gene = headgear
+                 template = afr_high_nobility
+                 accessory = male_headgear_epe_white_mena_nobility_02
+             }
+	 		accessory = {
+                 mode = add
+                 gene = clothes
+                 template = afr_high_nobility_clothes
+                 accessory = male_clothes_fp2_epe_baranis_nobility_05_high
+             }
+         }   
+         weight = {
+             base = 0
+             modifier = {
+                 add = 100
+	 			exists = this
+	 			exists = character:EPE_spouse_sawdanid
+	 			this = character:EPE_spouse_sawdanid
+                 portrait_high_nobles_trigger = { 
+                     CULTURE_INPUT = afr_berber
+                 }
+             }
+         }
+    }
+
+    #Khotanese
+    166681_vijaya_vikarma_II_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_indian_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = ep3_beards_curly
+                accessory = m_beard_ep3_byzantine_02
+            }
+        }  
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:166681
+                this = character:166681
+            }
+        }
+    }
+    166681_vijaya_vikarma_II_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_indian_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = ep3_beards_curly
+                accessory = m_beard_ep3_byzantine_02
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_sino_iranian_clothes
+                accessory = m_clothes_sec_tgp_sino_iranian_roy_nob_02
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = tgp_sino_iranian_headgear
+                accessory = m_headgear_sec_tgp_chinese_imp_02
+            }
+            accessory = {
+                mode = add
+                gene = cloaks
+                template = no_cloak
+				value = 0.68
+            }			
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:166681
+                this = character:166681
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_sino_iranian
+                    }
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_sino_iranian
+                    }
+                }
+            }
+        }
+    }
+
+    EPE_Sutoka_vijaya_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+				value = 0.68
+            }
+
+        }  
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:166682
+                this = character:166682
+            }
+        }
+    }
+	
+    EPE_Sutoka_vijaya_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+				value = 0.68
+            }
+
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_sino_iranian_clothes
+                accessory = m_clothes_sec_tgp_sino_iranian_roy_nob_02
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = tgp_sino_iranian_headgear
+				value = 0.52
+            }			
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:166682
+                this = character:166682
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_sino_iranian
+                    }
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_sino_iranian
+                    }
+                }
+            }
+        }
+    }
+
+    #Qocho
+    302972_bokut_bilga_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = tgp_chinese_hairstyles
+                accessory = m_hair_tgp_chinese_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = tgp_chinese_beards
+                accessory = m_beard_tgp_chinese_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:302972
+                this = character:302972
+            }
+        }
+    }
+	
+    302972_bokut_bilga_qocho_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = tgp_chinese_hairstyles
+                accessory = m_hair_tgp_chinese_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = tgp_chinese_beards
+                accessory = m_beard_tgp_chinese_04
+            }
+
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_uyghur_clothes
+                accessory = m_clothes_sec_tgp_uyghur_imp_nob_01
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = tgp_uyghur_headgear
+                accessory = male_Uyghur_Royal_Headwear_01
+            }							
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:302972
+                this = character:302972
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                }
+            }
+        }
+    }
+
+    EPE_qocho_ruler_spouse_867_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = eastern_iranian_hairstyles_straight
+				value = 0.40
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:bodpa0246
+                this = character:bodpa0246
+            }
+        }
+    }
+    EPE_qocho_ruler_spouse_867_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = eastern_iranian_hairstyles_straight
+				value = 0.40
+            }
+
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_uyghur_clothes
+				value = 0.45
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+				template = ccp9_celestial_court_headgear
+                accessory = m_headgear_ccp9_uyg_roy_01
+            }							
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:bodpa0246
+                this = character:bodpa0246
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                }
+            }
+        }
+    }
+	
+
+    302974_irge_bilga_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_steppe_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:302974
+                this = character:302974
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+
+    302974_irge_bilga = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_steppe_01
+                type = female
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:302974
+                this = character:302974
+            }    
+        }
+    }
+
+    EPE_gokalpbags_clan_ancestor_5f = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ccp9_uighur_hairstyles
+                accessory = male_hair_turkic_02
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                range = { 0 1 } # For the randomness to work correctly
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = ccp9_celestial_court_headgear
+                accessory = m_headgear_ccp9_uyg_roy_01
+            }			
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:EPE_gokalpbags_clan_ancestor_5f
+                this = character:EPE_gokalpbags_clan_ancestor_5f
+            }
+        }
+    }
+
+    #Qocho 1066
+    302979_1066_bilga_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ccp9_uighur_hairstyles
+                accessory = m_hair_ccp9_uyg_nob_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = han_beards_curly
+                accessory = male_beard_mena_04
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:302979
+                this = character:302979
+            }
+        }
+    }
+
+    302979_1066_bilga_qocho_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ccp9_uighur_hairstyles
+                accessory = m_hair_ccp9_uyg_nob_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = han_beards_curly
+                accessory = male_beard_mena_04
+            }
+
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_uyghur_clothes
+                accessory = m_clothes_sec_tgp_uyghur_roy_nob_02
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = ccp9_celestial_court_headgear
+                accessory = m_headgear_ccp9_uyg_roy_01
+            }							
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:302979
+                this = character:302979
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                }
+            }
+        }
+    }
+
+    #1066 Vermandois
+    40409_alix_vexin_amiens_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = western_nobility
+                accessory = female_headgear_secular_western_nobility_02
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:40409
+				this = character:40409
+                portrait_low_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    40409_alix_vexin_amiens = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = female_hair_western_05
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:40409
+                this = character:40409
+            }    
+        }
+    }
+
+    # Bagratuni
+    41505_ashot_I_bagratuni_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_09
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:41505
+                this = character:41505
+                portrait_imperial_trigger = {
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    41505_ashot_I_bagratuni = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_09
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = scripted_character_beards_01
+                accessory = male_beard_western_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:41505
+                this = character:41505
+            }    
+        }
+    }
+    
+    175060_kallar_shahi = { # 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_iranian_straight
+                accessory = m_hair_fp3_iranian_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = fp3_iranian_beards_straight
+                accessory = m_beard_fp3_iranian_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:175060
+                this = character:175060
+            }    
+        }
+    }
+    175060_kallar_shahi = { # 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_iranian_straight
+                accessory = m_hair_fp3_iranian_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:EPE_spouse_shahi
+                this = character:EPE_spouse_shahi
+            }    
+        }
+    }	
+	
+#---------------------------------------------------- 867 Historical Figures - Karlings ------------------------------------------------------------#
+
+    # Rostislav Mojmirid #
+    187002_rostislav_mojmirid_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = western_hairstyles_wavy
+                accessory = male_hair_western_08
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = western_beards_straight
+                accessory = male_beard_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+                age > 4
+				exists = character:187002
+				this = character:187002
+                portrait_royalty_trigger = {
+                    CULTURE_INPUT = western
+                }   
+            }
+        }
+    }
+
+    # Rostislav Mojmirid #
+    187002_rostislav_mojmirid = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = western_hairstyles_wavy
+                accessory = male_hair_western_08
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = western_beards_straight
+                accessory = male_beard_western_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+				exists = this
+                age > 4
+				exists = character:187002
+				this = character:187002
+            }
+        }
+    }
+
+    # Svatopluk Mojmirid #
+    187003_svatopluk_mojmirid_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = western_hairstyles_wavy
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = western_beards_straight
+                accessory = male_beard_western_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:187003
+                this = character:187003
+                portrait_high_nobles_trigger = {
+                    CULTURE_INPUT = western
+                }   
+            }
+        }
+    }
+
+    # Svatopluk Mojmirid #
+    187003_svatopluk_mojmirid = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = western_hairstyles_wavy
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = western_beards_straight
+                accessory = male_beard_western_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                age > 4
+                exists = character:187003
+                this = character:187003
+            }
+        }
+    }
+    
+#---------------------------------------------------- 1066 Historical Figures ------------------------------------------------------------#
+
+    204500_henry_curtmantle = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = male_hair_western_08
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_sp3_western_01
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:204500
+                this = character:204500
+            }
+        }
+    }
+
+    212501_friedrich_barbarossa = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = male_beard_western_06
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:212501
+                this = character:212501
+            }
+        }
+    }
+
+    204510_richard_the_lionhearted = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:204510
+                this = character:204510
+            }
+        }
+    }
+
+    215530_manuel_komnenos_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_02
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = all_headgear
+                accessory = m_headgear_sec_ep3_byzantine_era2_imp_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:215530
+                this = character:215530
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = byzantine
+                }
+            }
+        }
+    }
+
+    226000_saladin = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = epe_scripted_character_clothes
+                accessory = m_clothes_sec_saladin_war_imp_01
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = epe_scripted_character_headgears
+                accessory = m_headgear_ayyubid_war_royality_01
+                type = male
+            }
+			accessory = {
+				mode = add
+				gene = legwear
+				template = mena_war_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}			
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:226000
+                this = character:226000
+                portrait_royalty_trigger = { 
+                    CULTURE_INPUT = dde_abbasid
+                }
+            }
+        }
+    }
+
+    223743_maria_of_antioch = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = f_hair_ep3_byzantine_04
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:223743
+                this = character:223743
+            }
+        }
+    }
+
+    215532_anna_komnene = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = f_hair_ep3_byzantine_01
+                type = female
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:215532
+                this = character:215532
+            }
+        }
+    }
+
+    232531_nikephoros_bryennios = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:232531
+                this = character:232531
+            }
+        }
+    } 
+
+    223023_john_komnenos = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = male_hair_western_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = male_beard_fp2_iberian_christian_03
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:223023
+                this = character:223023
+            }
+        }
+    } 
+
+    163115_ahmad__tulun_start = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_fp3_iranian_02
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = religious_muslim_high_clothes
+                accessory = male_clothes_religious_muslim_high_01
+                type = male
+            }
+            accessory = {
+                mode = add
+                gene = headgear
+                template = dde_abbasid_high_nobility
+                accessory = male_headgear_secular_dde_abbasid_high_nobility_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:163115
+                this = character:163115
+                portrait_royalty_trigger = { 
+                    CULTURE_INPUT = dde_abbasid
+                }
+            }
+        }
+    } 
+
+    81831_rhodri_gwynedd_start = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = m_hair_ep3_byzantine_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = all_beards
+                accessory = m_beard_ep3_byzantine_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:81831
+                this = character:81831
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+    
+    223523_baudouin = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = all_hairstyles
+                accessory = male_hair_western_03_disease
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = no_beard
+                value = 0.5
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 2000
+                exists = this
+                exists = character:223523
+                this = character:223523
+            }
+        }
+    }
+	
+    110501_isabel_aragon = { #
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_03
+                accessory = male_hair_fp2_iberian_christian_03
+            }
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:110501
+                this = character:110501
+                portrait_high_nobles_trigger = { 
+                    CULTURE_INPUT = western
+                }
+            }
+        }
+    }
+
+    211500_william_of_sicily_start = { #
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = ep3_byzantine_hairstyle
+                accessory = m_hair_ep3_byzantine_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = ep2_beards
+                accessory = m_beard_ep2_western_01
+            }			
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:211500
+                this = character:211500
+            }
+        }
+    }
+
+    204513_joan_of_england_start = { #
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = scripted_character_hairstyles_01
+                accessory = male_hair_western_09
+            }			
+
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:204513
+                this = character:204513
+            }
+        }
+    }
+	
+
+    144228_muhammad_ii_nizari_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = iranian_hairstyles_wavy
+                accessory = male_hair_mena_02
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = iranian_beards_straight
+                accessory = mena_islamic_pointed_beard
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = fp3_iranian_high_nobility
+                accessory = male_headgear_epe_white_mena_high_01
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+				exists = character:144228
+				this = character:144228
+                portrait_high_nobles_trigger = {
+                    CULTURE_INPUT = epe_islamic_iranian
+                }   
+            }
+        }
+    }
+
+    144228_muhammad_ii_nizari = { # This is a fallback in case rank or culture changes - our character will keep hairstyle and beard but otherwise use regular triggers 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = iranian_hairstyles_wavy
+                accessory = male_hair_mena_02
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = iranian_beards_straight
+                accessory = mena_islamic_pointed_beard
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:144228
+                this = character:144228
+            }
+        }
+    }
+
+    144228_muhammad_ii_nizari_royal = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = iranian_hairstyles_wavy
+                accessory = male_hair_mena_02
+            }
+			accessory = {
+                mode = add
+                gene = beards
+                template = iranian_beards_straight
+                accessory = mena_islamic_pointed_beard
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = fp3_iranian_royalty
+                accessory = male_headgear_epe_white_ep1_mena_royalty_02
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+				exists = character:144228
+				this = character:144228  
+                OR = {
+                    portrait_royalty_trigger = {
+                        CULTURE_INPUT = epe_islamic_iranian
+                    }
+                    portrait_imperial_trigger = {
+                        CULTURE_INPUT = epe_islamic_iranian
+                    }				
+                }				
+            }
+        }
+    }	
+
+    spoused_muhammad_ii_nizari_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = iranian_hairstyles_wavy
+                accessory = male_hair_mena_02
+            }
+			accessory = {
+                mode = add
+                gene = headgear
+                template = fp3_iranian_high_nobility
+                accessory = male_headgear_epe_white_mena_high_01
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = fp3_iranian_high_nobility_clothes
+                accessory = m_clothes_islamic_iranian_nobility_06_high
+            }
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+				exists = this
+				exists = character:EPE_spoused_muhammad_ii_nizari
+				this = character:EPE_spoused_muhammad_ii_nizari
+                portrait_high_nobles_trigger = {
+                    CULTURE_INPUT = epe_islamic_iranian
+                }   
+            }
+        }
+    }
+
+    spoused_muhammad_ii_nizari = { #
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = iranian_hairstyles_wavy
+                accessory = male_hair_mena_02
+            }
+
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 100
+                exists = this
+                exists = character:EPE_spoused_muhammad_ii_nizari
+                this = character:EPE_spoused_muhammad_ii_nizari
+            }
+        }
+    }
+
+    90143_cuman_aepak_1066 = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_straight
+                accessory = male_hair_turkic_05
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = seljuk_beards_straight
+                accessory = mena_islamic_pointed_beard
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:90143
+                this = character:90143
+            }
+        }
+    }
+	
+    90142_cuman_blush_founder = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_straight
+                accessory = male_hair_turkic_03
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = mpo_mongol_beards
+                accessory = m_beard_mpo_mongol_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:90142
+                this = character:90142
+            }
+        }
+    }
+
+    801_cuman_anna_1066 = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_curly
+                accessory = male_hair_mena_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:801
+                this = character:801
+            }
+        }
+    }	
+	
+
+    806_cuman_saru_1066 = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_turkic_straight
+                accessory = m_hair_fp3_iranian_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = seljuk_beards_straight
+                accessory = mena_islamic_pointed_beard_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:806
+                this = character:806
+            }
+        }
+    }
+
+    806_cuman_saru_1066_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = mpo_mongol_headgear
+                accessory = m_headgear_sec_mpo_mongol_roy_01	
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = western_turkic_clothes
+                accessory = m_clothes_fp3_Cuman_nobility_04_high	
+            }			
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = fp3_hairstyles_turkic_straight
+                accessory = m_hair_fp3_iranian_01
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = seljuk_beards_straight
+                accessory = mena_islamic_pointed_beard_03
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:806
+                this = character:806
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }
+
+    144107_muhmud_karakhanids = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_straight
+                accessory = male_hair_turkic_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = mpo_mongol_beards
+                accessory = m_beard_mpo_mongol_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                age > 4
+                exists = character:144107
+                this = character:144107
+            }
+        }
+    }
+
+    144107_muhmud_karakhanids_start = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = headgear
+                template = tgp_uyghur_headgear
+                accessory = m_headgear_secular_epe_steppe_muslim_hi_noble_01_white	
+            }
+            accessory = {
+                mode = add
+                gene = clothes
+                template = seljuk_turkic_clothes
+                accessory = male_clothes_secular_seljuk_nobility_03_high	
+            }			
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_straight
+                accessory = male_hair_turkic_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = mpo_mongol_beards
+                accessory = m_beard_mpo_mongol_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                exists = this
+                age > 4
+                exists = character:144107
+                this = character:144107
+				highest_held_title_tier = tier_kingdom
+            }
+        }
+    }
+	
+    144107_muhmud_karakhanids_imperial = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = clothes
+                template = seljuk_turkic_clothes
+                accessory = male_clothes_secular_seljuk_nobility_03_high	
+            }			
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_straight
+                accessory = male_hair_turkic_04
+            }
+            accessory = {
+                mode = add
+                gene = beards
+                template = mpo_mongol_beards
+                accessory = m_beard_mpo_mongol_02
+            }
+        }
+        weight = {
+            base = 0
+            modifier = {
+                add = 1000
+                exists = this
+                age > 4
+                exists = character:144107
+                this = character:144107
+                portrait_imperial_trigger = { 
+                    CULTURE_INPUT = steppe
+                }
+            }
+        }
+    }		
+   ###The Smiling Khatun
+    EPE_soyenbika_gokalpbags_867_default = { 
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+                accessory = male_hair_northern_03
+				accessory = female_hair_fp2_iberian_muslim_03_common
+				type = female				
+            }
+			morph = {
+				mode = add
+				gene = gene_makeup
+				template = epe_uyghur_01
+				value = 1.0
+			}
+			
+			########Makeup placeholder test#############		
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.55
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.52
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.90
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.01
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = foundation_none
+				value = 0.01
+			}
+			#############################################				
+
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 200
+                exists = this
+                exists = character:EPE_soyenbika_gokalpbags_867
+                this = character:EPE_soyenbika_gokalpbags_867
+				
+            }
+        }
+    }
+
+    EPE_soyenbika_gokalpbags_867_start = { 
+        dna_modifiers = {
+
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+                accessory = male_hair_northern_03
+				accessory = female_hair_fp2_iberian_muslim_03_common
+				type = female				
+            }
+			morph = {
+				mode = add
+				gene = gene_makeup
+				template = epe_uyghur_01
+				value = 1.0
+			}		
+			########Makeup placeholder test#############		
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.55
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.52
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.90
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.01
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = foundation_none
+				value = 0.01
+			}
+			#############################################	
+			accessory = {
+                mode = add
+                gene = headgear
+                template = epe_scripted_character_headgears
+                accessory = Female_Khanum_Headress_smiling_khatun
+				type = female				
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = epe_scripted_character_clothes
+                accessory = f_clothes_sec_fp3_smiling_khatun_hi
+				type = female				
+            }
+		
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 999
+                exists = this
+                exists = character:EPE_soyenbika_gokalpbags_867
+                this = character:EPE_soyenbika_gokalpbags_867
+				OR = {
+					portrait_low_nobles_clothing_trigger = {
+						CULTURE_INPUT = epe_uyghur
+					}
+					portrait_high_nobles_headgear_trigger = {
+						CULTURE_INPUT = epe_uyghur
+					}
+					
+				}
+            }
+        }
+    }
+
+    EPE_soyenbika_gokalpbags_867_royal = { 
+        dna_modifiers = {
+
+
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+                accessory = male_hair_northern_03
+				accessory = female_hair_fp2_iberian_muslim_03_common
+				type = female				
+            }
+			morph = {
+				mode = add
+				gene = gene_makeup
+				template = epe_uyghur_01
+				value = 1.0
+			}
+			########Makeup placeholder test#############		
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.55
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.52
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.90
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.01
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = foundation_none
+				value = 0.01
+			}
+			#############################################	
+			accessory = {
+                mode = add
+                gene = headgear
+                template = epe_scripted_character_headgears
+                accessory = Female_Khanum_Headress_smiling_khatun
+				type = female				
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_uyghur_clothes
+                accessory = f_clothes_uyghur_turko_mongol_roy_01
+				type = female				
+            }				
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 999
+                exists = this
+                exists = character:EPE_soyenbika_gokalpbags_867
+                this = character:EPE_soyenbika_gokalpbags_867
+                OR = {
+                    portrait_royalty_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                }
+            }
+        }
+    }
+	
+    EPE_soyenbika_gokalpbags_867_imperial = { 
+        dna_modifiers = {
+
+            accessory = {
+                mode = add
+                gene = hairstyles
+                template = turkic_hairstyles_wavy
+                accessory = male_hair_northern_03
+				accessory = female_hair_fp2_iberian_muslim_03_common
+				type = female				
+            }
+			morph = {
+				mode = add
+				gene = gene_makeup
+				template = epe_uyghur_01
+				value = 1.0
+			}
+			########Makeup placeholder test#############		
+			morph = {
+				mode = add
+				gene = cosmetics_eyeliner
+				template = iranian_1
+				value = 0.55
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_eyeshadow
+				template = byzantine_1
+				value = 0.52
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_lipcolor
+				template = byzantine_1
+				value = 0.90
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_blush
+				template = iranian_1
+				value = 0.01
+			}
+			morph = {
+				mode = add
+				gene = cosmetics_foundation
+				template = foundation_none
+				value = 0.01
+			}
+			#############################################	
+			accessory = {
+                mode = add
+                gene = headgear
+                template = tgp_uyghur_headgear
+                accessory = Female_Khanum_Headress_01_uyghur
+				type = female				
+            }
+			accessory = {
+                mode = add
+                gene = clothes
+                template = tgp_uyghur_clothes
+                accessory = f_clothes_uyghur_turko_mongol_roy_02
+				type = female				
+            }				
+        }   
+        weight = {
+            base = 0
+            modifier = {
+                add = 999
+                exists = this
+                exists = character:EPE_soyenbika_gokalpbags_867
+                this = character:EPE_soyenbika_gokalpbags_867
+                OR = {
+                    portrait_imperial_clothing_trigger = {
+                        CULTURE_INPUT = epe_uyghur
+                    }
+                }
+            }
+        }
+    }		
+	
+}

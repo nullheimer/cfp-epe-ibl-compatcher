@@ -1,0 +1,252 @@
+﻿cfp_legwear = {
+	# interface_position = 1
+	usage = game
+	selection_behavior = max
+
+	no_legwear = {
+		usage = game 
+		dna_modifiers = {
+			accessory = {
+				mode = add
+		
+				gene = legwear
+				template = no_legwear
+				value = 0
+			}
+		}
+        outfit_tags = { no_clothes }
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				AND = {
+					# Deliberately not the "fully naked" one since you'll wear a nightgown if we don't allow full nudity
+					should_be_naked_trigger = yes
+				}
+			}
+		}
+	}
+
+	cfp_western_war_legwear_late = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = cfp_western_war_legwear_late
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			# morph = {
+			# 	mode = modify_multiply
+			# 	gene = gene_bs_body_shape
+			# 	value = 1.0
+			# 	template = body_shape_average
+			# }
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				portrait_wear_armor_trigger = yes
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_northern_clothing_trigger = yes
+				}
+				cfp_innovation_plate_armor_trigger = yes
+			}
+		}
+	}
+
+	turkic_common_legwear = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = mena_common_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 20
+				portrait_cfp_turkic_clothing_trigger = yes
+			}
+		}
+	}
+
+	turkic_nobility_legwear = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = mena_nobility_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				trigger_if = {
+					limit = { exists = this }
+					OR = {
+						AND = {
+							OR = {
+								highest_held_title_tier > tier_county
+								AND = {
+									government_has_flag = government_is_republic
+									primary_title.tier > 1
+								}
+								AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+							}
+							NOT = { AND = { is_ruler = yes government_has_flag = government_is_mercenary  } } # Blocked for mercenaries
+							portrait_cfp_turkic_clothing_trigger = yes
+						}
+						AND = {
+							exists = primary_spouse
+							OR = {
+								is_ruler = no
+								highest_held_title_tier = tier_barony
+							}
+							primary_spouse = {
+								OR = {
+									highest_held_title_tier > tier_county
+									AND = {
+										government_has_flag = government_is_republic
+										primary_title.tier > 1
+									}
+									AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+								}
+								portrait_cfp_turkic_clothing_trigger = yes
+							}
+						}
+					}
+				}
+				trigger_else = {
+					scope:highest_held_title_tier > tier_county
+					portrait_cfp_turkic_clothing_trigger = yes
+				}
+			}
+		}
+	}
+
+	turkic_war_legwear = {
+
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = mena_war_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		outfit_tags = { mena_war_legwear }
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				portrait_wear_armor_trigger = yes
+				portrait_cfp_turkic_clothing_trigger = yes
+			}
+		}
+	}
+
+	sub_saharan_legwear = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = cfp_sub_saharan_common_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 1000
+				OR = {
+					portrait_african_clothing_trigger = yes
+				}
+			}
+		}
+	}
+
+	burmese_common_legwear = {
+	
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = cfp_javanese_common_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				portrait_commoner_clothing_trigger = {
+					CULTURE_INPUT = cfp_burmese 
+				}
+			}
+		}
+	}
+
+	burmese_noble_legwear = {
+	
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = cfp_javanese_nobility_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+                portrait_low_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = cfp_burmese
+                }
+			}
+		}
+	}
+
+	burmese_royal_legwear = {
+	
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = legwear
+				template = cfp_javanese_royalty_legwear
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}	
+		weight = {
+			base = 0	
+			modifier = {
+				add = 101
+                portrait_high_nobles_clothing_trigger = { 
+                    CULTURE_INPUT = cfp_burmese
+                }
+			}
+			modifier = {
+				factor = 0
+				is_female = yes
+				OR = {
+					portrait_royalty_clothing_trigger = {
+						CULTURE_INPUT = cfp_burmese
+					}
+					portrait_imperial_clothing_trigger = {
+						CULTURE_INPUT = cfp_burmese
+					}
+				}
+			}
+		}
+	}
+
+}

@@ -8,11 +8,12 @@ import sys
 
 def main():
 	# Paths
-	ck3_dir = Path("G:/Steam/steamapps/common/Crusader Kings III")
-	output_dir = Path("G:/ck3/cfp-epe-ibl")
-	workshop_dir = Path("G:/Steam/steamapps/workshop/content/1158310")
-	cfp_epe_dir = Path("C:/Users/Anton/OneDrive/Dokumente/Paradox Interactive/Crusader Kings III/mod/CFP + EPE Compatibility Patch")
-	ibl_epe_dir = Path("C:/Users/Anton/OneDrive/Dokumente/Paradox Interactive/Crusader Kings III/mod/IBL + EPE Compatibility Patch")
+	script_dir = Path(__file__).parent
+	ck3_dir = Path("/mnt/e/SteamLibrary/steamapps/common/Crusader Kings III")
+	output_dir = Path(script_dir, "output")
+	workshop_dir = Path("/mnt/e/SteamLibrary/steamapps/workshop/content/1158310")
+	cfp_epe_dir = Path("/mnt/c/Users/Anton/Documents/Paradox Interactive/Crusader Kings III/mod/CFP + EPE Compatibility Patch")
+	ibl_epe_dir = Path("/mnt/c/Users/Anton/Documents/Paradox Interactive/Crusader Kings III/mod/IBL + EPE Compatibility Patch")
 
 	# Create path lists for copy operation
 	epe_files, cfp_files, ibl_files = [], [], []
@@ -24,15 +25,15 @@ def main():
 		(cfp_files, "2220098919/gfx/portraits/portrait_modifiers", "cfp/cfp-portrait_modifiers", "CFP portraits"),
 		(ibl_files, "2416949291/common/culture/cultures", "ibl", "IBL cultures")
 	)
-	additional_headgear_paths = (
-		"G:/Steam/steamapps/workshop/content/1158310/2507209632/gfx/portraits/portrait_modifiers", # EPE
-		"G:/Steam/steamapps/common/Crusader Kings III/game/gfx/portraits/portrait_modifiers", # Vanilla
-		"G:/Steam/steamapps/workshop/content/1158310/2273832430/gfx/portraits/portrait_modifiers", # RICE
-		"G:/Steam/steamapps/workshop/content/1158310/2871648329/gfx/portraits/portrait_modifiers" # Unofficial Patch
+	headgear_paths = (
+		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2507209632/gfx/portraits/portrait_modifiers", # EPE
+		"/mnt/e/SteamLibrary/steamapps/common/Crusader Kings III/game/gfx/portraits/portrait_modifiers", # Vanilla
+		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2273832430/gfx/portraits/portrait_modifiers", # RICE
+		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2871648329/gfx/portraits/portrait_modifiers" # Unofficial Patch
 	)
 
 	# Get current version from ck3 dir, ask for version number and create working directory
-	with open(Path(ck3_dir, "titus_branch.txt"), "r", encoding="utf-8") as f:
+	with open(Path(ck3_dir, "clausewitz_branch.txt"), "r", encoding="utf-8") as f:
 		fcontent = f.readlines()
 	current_version = re.search(r"([\d.]+)", fcontent[0]).group(1)
 	
@@ -48,25 +49,27 @@ def main():
 	working_dir = create_folders(version_no, output_dir)
 
 	# Scan directories to get list of files to add headgear_2 to
-	headgear_files = scan_headgears(working_dir, all_paths, additional_headgear_paths)
+	headgear_files = scan_headgears(working_dir, all_paths, headgear_paths)
 	
 	# Get list of compatched files
 	populate(cfp_epe_dir, ibl_epe_dir, headgear_files, workshop_dir, all_paths)
 
 	# Compare files with previous version and copy mismatching to working directory
-	new_dirs = copy_files(workshop_dir, output_dir, working_dir, all_paths)
-	
-	# Open directories containing copied files in explorer?
-	explorer_prompt = input ("Open working directories? y/[n]: ")
-	if explorer_prompt.lower() == "y":
-		print("2507209632: EPE\n2220098919: CFP")
-		for folder in new_dirs:
-			os.startfile(folder)
+	copy_files(workshop_dir, output_dir, working_dir, all_paths)
+
+	#new_dirs = copy_files(workshop_dir, output_dir, working_dir, all_paths)
+	## Open directories containing copied files in explorer?
+	#explorer_prompt = input ("Open working directories? y/[n]: ")
+	#if explorer_prompt.lower() == "y":
+	#	print("2507209632: EPE\n2220098919: CFP")
+	#	for folder in new_dirs:
+	#		os.startfile(folder)
 	
 	# Patch files to add headgear_2 gene
-	add_gene_prompt = input ("Add headgear_2 genes? [y]/n: ")
-	if not add_gene_prompt or add_gene_prompt.lower() == "y":
-		add_gene(working_dir, all_paths)
+	#add_gene_prompt = input ("Add headgear_2 genes? [y]/n: ")
+	#if not add_gene_prompt or add_gene_prompt.lower() == "y":
+	#	add_gene(working_dir, all_paths)
+	add_gene(working_dir, all_paths)
 
 def create_folders(version_no, output_dir):
 	output_contents = os.listdir(output_dir)
@@ -87,31 +90,32 @@ def create_folders(version_no, output_dir):
 		print(f"{version_no} already exists, created {new_version_no} instead.")
 	return working_dir
 
-def scan_headgears(working_dir, all_paths, additional_headgear_paths):
+def scan_headgears(working_dir, all_paths, headgear_paths):
 	# We actually need RICE and Unofficial Patch/Vanilla, too
-	# version/epe/epe-portrait_modifiers/headgear_2(/additional)
+	# Create version/epe/epe-portrait_modifiers/headgear_2/additional
 	Path(working_dir, all_paths[1][2], "headgear_2/additional").mkdir(parents=True, exist_ok=True)
+
 	headgear_files = [] # EPE + Vanilla
 	
 	# Iterate through provided paths and scan directories for files that contain "gene = headgear"
-	for path in range(len(additional_headgear_paths)):
-		for file in os.listdir(Path(additional_headgear_paths[path])):
+	for path in range(len(headgear_paths)):
+		for file in os.listdir(Path(headgear_paths[path])):
 			if (
-				not re.search(r"custom|.info", file) # Ignore "custom" files
+				not re.search(r"custom|.info", file) # Ignore "custom" and ".info" files
 				# Prevent duplicate files from different sources, ...
 				and (file not in headgear_files or path == 3) # ... but allow Unofficial Patch nontheless
 			):
-				with open(Path(additional_headgear_paths[path], file), "r", encoding="utf-8-sig") as f:
+				with open(Path(headgear_paths[path], file), "r", encoding="utf-8-sig") as f:
 					lines = f.readlines()
 				for line in lines:
 					if re.match(r"^\s*gene\s*=\s*headgear", line):
-						headgear_files.append(file)
 						# 0th + 1st index of path are EPE and Vanilla
 						if path < 2:
-							copy(Path(additional_headgear_paths[path], file), Path(working_dir, all_paths[1][2], "headgear_2", file))
+							copy(Path(headgear_paths[path], file), Path(working_dir, all_paths[1][2], "headgear_2", file))
+							headgear_files.append(file)
 						# RICE and Unop files go to a seperate folders, these don't go into CFP + EPE Compatch
 						else:
-							copy(Path(additional_headgear_paths[path], file), Path(working_dir, all_paths[1][2], "headgear_2/additional", file))
+							copy(Path(headgear_paths[path], file), Path(working_dir, all_paths[1][2], "headgear_2/additional", file))
 						break
 
 	return headgear_files
@@ -138,7 +142,7 @@ def populate(cfp_epe_dir, ibl_epe_dir, headgear_files, workshop_dir, all_paths):
 	if tmp == 0:
 		input(f"No files were found in {ibl_epe_dir}. Press enter to exit..")
 		sys.exit(1)
-	# Manually add EPE cultures
+	# Manually add EPE cultures, brute
 	epe_cultures = [
 		"00_berber.txt"
 		"00_central_african.txt",

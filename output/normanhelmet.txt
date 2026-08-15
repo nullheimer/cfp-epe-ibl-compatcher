@@ -1,0 +1,58 @@
+	epe_norman_sicilian_era2_war = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = headgear
+				template = norman_sicilian_war
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			accessory = {
+				mode = add
+				gene = headgear_2
+				template = no_headgear
+				value = 0
+			}
+			accessory = {
+				mode = add
+				gene = additive_headgear
+				template = no_additive
+				range = { 0 1 } # For the randomness to work correctly
+			}
+			morph = {
+                mode = add
+                gene = gene_bs_nose_forward
+                template = nose_forward_neg                
+                value = 1.0
+            }		
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 102 #99
+                OR = {
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = epe_norman_sicily
+                    }
+                    portrait_war_nobles_helmet_trigger = {
+                        CULTURE_INPUT = epe_sicilian
+                    }
+					portrait_war_nobles_helmet_trigger = {
+						CULTURE_INPUT = cfp_norman_sicily 
+					}
+                }			
+				NOR = {
+					has_game_rule = never_cfp_fullplate_helmets
+					has_game_rule = never_epe_fullface_helmets
+				}	
+			}
+            modifier = {
+                factor = 0       # Should NOT show up if EP2 is active and we're in the early era
+                has_ep2_dlc_trigger = yes   
+                OR = {
+                    portrait_era1_trigger = yes
+                    portrait_era4_armor_trigger = yes					
+                }
+            }
+			
+		}
+	}

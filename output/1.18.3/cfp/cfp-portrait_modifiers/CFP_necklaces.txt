@@ -1,0 +1,278 @@
+﻿cfp_necklaces = {
+	
+	usage = game
+	selection_behavior = weighted_random
+	fallback = cfp_no_necklace
+	
+	cfp_no_necklace = {
+        dna_modifiers = {
+            accessory = {
+                mode = add
+                gene = special_accessories_necklace
+                template = cfp_no_necklace
+                range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		outfit_tags = { no_clothes }
+		weight = {
+			base = 0
+			modifier = {
+				add = 200
+				has_character_flag = single_combat_duel_armor
+			}	
+		}
+	}
+	
+	cfp_western_royalty_ermine = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_western_royalty_ermine
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				cfp_innovation_ermine_cloaks_trigger = yes
+				OR = {
+					portrait_western_clothing_trigger = yes
+					portrait_northern_clothing_trigger = yes
+					portrait_byzantine_clothing_trigger = yes
+				}
+			}
+			modifier = {
+				factor = 0
+				exists = this
+				OR = {
+					is_adult = no
+					highest_held_title_tier < tier_kingdom
+					government_has_flag = government_is_theocracy
+					has_character_modifier = vow_of_poverty_modifier
+					# Deliberately not the "fully naked" one since dropping your cloak's intended even if nudity is disabled
+					should_be_naked_trigger = yes
+					portrait_wear_armor_trigger = yes
+					is_travelling = yes
+					involved_activity ?= { has_activity_type = activity_hunt }
+					AND = { 
+						government_has_flag = government_is_republic
+						NOT = { has_primary_title = title:k_venice }
+					}
+				}
+			}
+		}
+	}
+	
+	cfp_western_high_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_western_high_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				exists = this
+				highest_held_title_tier >= tier_duchy # for dukes and above
+				religion = religion:christianity_religion
+				portrait_western_clothing_trigger = yes
+				OR = {
+					portrait_has_trait_trigger = { TRAIT = zealous }
+					portrait_has_trait_trigger = { TRAIT = theologian }
+					portrait_has_trait_trigger = { TRAIT = faith_warrior }
+					portrait_has_trait_trigger = { TRAIT = devoted }
+				}
+				NOR = {
+					faith = { has_doctrine_parameter = vows_of_poverty_active }
+					faith = faith:orthodox
+					faith = faith:armenian_apostolic
+					faith = faith:coptic
+					faith = faith:messalian
+					faith = faith:bogomilist
+					faith = faith:paulician
+					faith = faith:nestorian
+				}
+			}
+		}
+	}
+	
+	cfp_african_low_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_african_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				exists = this
+				NOR = {
+					portrait_cfp_central_africa_clothing_trigger = yes
+					is_male = yes
+				}
+				OR = {
+					portrait_cfp_west_africa_clothing_trigger = yes
+					portrait_cfp_east_africa_clothing_trigger = yes
+				}
+				OR = {
+					AND = {
+						highest_held_title_tier >= tier_county # and above
+						NOR = {
+							has_dynasty = no
+							AND = {
+								government_has_flag = government_is_republic
+								primary_title.tier > 1
+							}
+							AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+						}
+					}
+					AND = {
+						exists = primary_spouse
+						OR = {
+							is_ruler = no
+							highest_held_title_tier >= tier_barony # and above
+						}
+						primary_spouse = {
+							highest_held_title_tier >= tier_county # and above
+							NOR = {
+								has_dynasty = no
+								AND = {
+									government_has_flag = government_is_republic
+									primary_title.tier > 1
+								}
+								AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	cfp_central_african_low_nobility = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_central_african_low_nobility
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				exists = this
+				portrait_cfp_central_africa_clothing_trigger = yes
+				OR = {
+					AND = {
+						highest_held_title_tier >= tier_county # and above
+						NOR = {
+							has_dynasty = no
+							AND = {
+								government_has_flag = government_is_republic
+								primary_title.tier > 1
+							}
+							AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+						}
+					}
+					AND = {
+						exists = primary_spouse
+						OR = {
+							is_ruler = no
+							highest_held_title_tier >= tier_barony # and above
+						}
+						primary_spouse = {
+							highest_held_title_tier >= tier_county # and above
+							NOR = {
+								has_dynasty = no
+								AND = {
+									government_has_flag = government_is_republic
+									primary_title.tier > 1
+								}
+								AND = { is_ruler = yes government_has_flag = government_is_theocracy }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	
+	cfp_religious_catholic_cross = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_religious_catholic_cross
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 101
+				exists = this
+				AND = {
+					highest_held_title_tier >= tier_duchy # for dukes and above
+					OR = {
+						portrait_has_trait_trigger = { TRAIT = zealous }
+						portrait_has_trait_trigger = { TRAIT = theologian }
+						portrait_has_trait_trigger = { TRAIT = faith_warrior }
+						portrait_has_trait_trigger = { TRAIT = devoted }
+					}
+					portrait_northern_clothing_trigger = yes
+					religion = religion:christianity_religion
+				}
+				NOR = {
+					faith = { has_doctrine_parameter = vows_of_poverty_active }
+					faith = faith:orthodox
+					faith = faith:armenian_apostolic
+					faith = faith:coptic
+					faith = faith:messalian
+					faith = faith:bogomilist
+					faith = faith:paulician
+					faith = faith:nestorian
+				}
+			}
+		}
+	}
+	
+	cfp_religious_catholic_pilgrim = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = special_accessories_necklace
+				template = cfp_religious_catholic_pilgrim
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 80
+				exists = this
+				portrait_religious_christian_trigger = yes
+				portrait_western_clothing_trigger = yes
+				is_male = yes
+				exists = current_travel_plan.travel_plan_activity
+				current_travel_plan = {
+					travel_plan_activity = {
+						has_activity_type = activity_pilgrimage
+					}
+				}
+			}
+		}
+	}
+	
+}
