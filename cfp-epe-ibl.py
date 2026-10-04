@@ -25,12 +25,7 @@ def main():
 		(cfp_files, "2220098919/gfx/portraits/portrait_modifiers", "cfp/cfp-portrait_modifiers", "CFP portraits"),
 		(ibl_files, "2416949291/common/culture/cultures", "ibl", "IBL cultures")
 	)
-	headgear_paths = (
-		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2507209632/gfx/portraits/portrait_modifiers", # EPE
-		"/mnt/e/SteamLibrary/steamapps/common/Crusader Kings III/game/gfx/portraits/portrait_modifiers", # Vanilla
-		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2273832430/gfx/portraits/portrait_modifiers", # RICE
-		"/mnt/e/SteamLibrary/steamapps/workshop/content/1158310/2871648329/gfx/portraits/portrait_modifiers" # Unofficial Patch
-	)
+
 
 	# Get current version from ck3 dir, ask for version number and create working directory
 	with open(Path(ck3_dir, "clausewitz_branch.txt"), "r", encoding="utf-8") as f:
